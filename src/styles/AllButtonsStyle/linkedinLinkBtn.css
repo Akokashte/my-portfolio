@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.linkedin_btn {
+    width: fit-content;
+    padding: 0.2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.2rem;
+    background-color: var(--bgPrimary);
+    text-decoration: none;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 0px 3px 2px, rgba(60, 64, 67, 0.15) 0px 0px 3px 2px;
+    cursor: pointer;
+}
+
+.linkedin_btn p {
+    color: var(--textLightBlue);
+    font-size: 1.3rem;
+    font-weight: var(--bold);
+}
+
+/* tab css */
+@media screen and (480px < width <= 1200px) {
+    .linkedin_btn {
+        width: fit-content;
+        padding: 0.6rem 1rem;
+        display: flex;
+        margin-top: 0.09rem;
+        align-items: center;
+        gap: 0.3rem;
+    }
+    
+    .linkedin_btn p {
+        font-size: 1.1rem
+    }
+}
+
+
+
+/* mobile css */
+
+@media screen and (max-width:480px) {
+    .linkedin_btn {
+        width: fit-content;
+        padding: 0.5rem 1rem;
+        display: flex;
+        margin-top: 0.07rem;
+        align-items: center;
+        gap: 0.4rem;
+    }
+    
+    .linkedin_btn p {
+        font-size: 0.95rem;
+    }
+    
+}
+
+
+@media screen and (740px < width < 929px) {
+    .linkedin_btn {
+        width: fit-content;
+        padding: 0.3rem 0.8rem;
+        display: flex;
+        margin-top: 0.07rem;
+        align-items: center;
+        gap: 0.4rem;
+    }
+    
+    .linkedin_btn p {
+        font-size: 0.89rem;
+    }
+
+    .share_icon{
+        width: 0.8rem;
+        height: 0.8rem;
+        display: flex;
+        margin-top: 0.2rem;
+        align-items: center;
+    }
+}

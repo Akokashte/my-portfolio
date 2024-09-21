@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.feedback_section {
+    width: 100%;
+    display: flex;
+    padding: 6rem 0;
+}
+
+.feedback_wrapper {
+    width: 100%;
+    position: relative;
+    /* background-color: khaki; */
+}
+
+.feedback_carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.star_image_container {}
+
+.star_div {
+    width: 7rem;
+    height: 7rem;
+}
+
+.star_div img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.image_div {
+    width: 7rem;
+    height: 7rem;
+}
+
+.image_div img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.feedback_content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.feedback_text {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    color: var(--textlight);
+    text-align: center;
+}
+
+.team_member_profile {
+    width: fit-content;
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+}
+
+.team_member_image {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+}
+
+.profile_image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.team_member_name {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.member_name {
+    font-size: 1.5rem;
+    font-weight: var(--bold);
+}
+
+.role_of_member{
+    font-size: 1.4rem;
+    font-weight: var(--semibold);
+    color: var(--textlight);
+}
+
+.left_top_team_member_image{
+    width: 8rem;
+    height: 8rem;
+    position: absolute;
+    top: 2rem;
+    left: 18rem;
+    border-radius: 50%;
+}
+
+.left_side_team_member_image{
+    width: 8rem;
+    height: 8rem;
+    position: absolute;
+    top: 16.5rem;
+    left: 3rem;
+    border-radius: 50%;
+}
+
+.left_bottom_team_member_image{
+    width: 8rem;
+    height: 8rem;
+    position: absolute;
+    top: 32rem;
+    left: 16rem;
+    border-radius: 50%;
+}
+
+.right_top_team_member_image{
+    width: 8rem;
+    height: 8rem;
+    position: absolute;
+    top: 2rem;
+    right:16.5rem;
+    border-radius: 50%;
+}
+
+.right_right_team_member_image{
+    width: 8rem;
+    height: 8rem;
+    position: absolute;
+    top: 16rem;
+    right:4rem;
+    border-radius: 50%;
+}
+
+.right_bottom_team_member_image{
+    width: 8rem;
+    height: 8rem;
+    position: absolute;
+    top: 29rem;
+    right:12rem;
+    border-radius: 50%;
+}

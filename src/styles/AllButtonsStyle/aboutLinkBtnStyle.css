@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.about_link_btn{
+    padding: 0.2rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.28rem;
+    cursor: pointer;
+    gap: 0.5rem;
+    color: rgb(53, 52, 52);
+    outline: 1px solid rgb(90, 85, 85);
+    transition: all 0.2s ease-in-out;
+}
+ 
+.about_link_btn .link_name{
+}
+
+.about_link_btn:hover{
+    background-color: black;
+    outline: 1px solid white;
+    color: white;
+}
+
+.about_link_btn_icon .btn_icon{
+   font-size: 1.5rem;
+}

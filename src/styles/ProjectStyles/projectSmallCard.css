@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.small_card_wrapper {
+    width: 100%;
+    height: 6.5rem;
+    display: flex;
+    gap: 0.2rem;
+    border-top: 1px solid gray;
+    padding-top: 1rem;
+}
+
+.img_wrapper {
+    width: 42%;
+    height: 100%;
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.img_wrapper:hover::after{
+    content: "";
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.149);
+}
+
+.img_wrapper img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.small_card_content {
+    width: 58%;
+    padding:0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.small_card_content_heading h2{
+    font-size: 0.9rem;
+    text-transform: capitalize;
+    color: #000000;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.small_card_content_heading h2:hover{
+    color: #1e29ff;
+}
+
+.small_card_content_category .cat_tab{
+    width: fit-content;
+    font-size: 0.8rem;
+    font-weight: var(--medium);
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.2rem;
+    color: #4c4d4d;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+
+/* tab css */
+@media screen and (900px < width <= 1200px) { 
+    .small_card_wrapper {
+        height: 6rem;
+        gap: 0.1rem;
+    }
+    
+    .img_wrapper {
+        width: 50%;
+        height: 100%;
+    }
+    
+    .img_wrapper:hover::after{
+    }
+    
+    .img_wrapper img {
+    }
+    
+    .small_card_content {
+        width: 50%;
+    }
+    
+    .small_card_content_heading h2{
+        font-size: 0.75rem;
+    }
+    
+    .small_card_content_heading h2:hover{
+    }
+    
+    .small_card_content_category .cat_tab{
+        width: fit-content;
+        font-size: 0.5rem;
+        padding: 0.1rem 0.4rem;
+    }
+    
+    
+}
+
+
+@media screen and (480px < width <900px){
+    .small_card_wrapper {
+        height: auto;
+        gap: 0.5rem;
+        /* this done */
+    }
+    
+    .img_wrapper {
+    }
+    
+    .img_wrapper:hover::after{
+    }
+    
+    .img_wrapper img {
+    }
+    
+    .small_card_content {
+        width: 50%;
+    }
+    
+    .small_card_content_heading h2{
+        font-size: 1.1rem;
+    }
+    
+    .small_card_content_heading h2:hover{
+    }
+    
+    .small_card_content_category .cat_tab{
+    }
+}

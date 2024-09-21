@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.project_info_left_section {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    padding: 0 2rem;
+    padding-bottom: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+.project_info_actual_data {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+}
+
+.featured_image_and_project_title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.featured_image {
+    width: 100%;
+    height: 30rem;
+    border-radius: 0.2rem;
+}
+
+.featured_image img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.2rem;
+}
+
+.project_title{
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+.project_block_data {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+
+/* tab css */
+/* @media screen and (480px < width <= 1200px) {
+    
+} */
+
+@media screen and (max-width: 900px){
+    .project_info_left_section {
+        width: 100%;
+        padding: 0 0;
+        padding-bottom: 2rem;
+        /* this done */
+    }
+    
+    .project_info_actual_data {
+    }
+    
+    .featured_image_and_project_title {
+    }
+    
+    .featured_image {
+        height: 18rem;
+        /* this done */
+    }
+    
+    .featured_image img {
+    }
+    
+    .project_title{
+        font-size: 1.8rem;
+        padding: 0 1.2rem;
+        /* this done */
+    }
+    
+    .project_block_data {
+        padding: 0 1.2rem;
+        gap: 1.2rem;
+        /* this done */
+    }
+    
+}
+
+/* mobile css */
+
+@media  screen and (max-width:480px) {
+    .project_info_left_section {
+        width: 100%;
+    }
+
+    .project_info_actual_data {
+    }
+    
+    .featured_image_and_project_title {
+    
+    }
+    
+    .featured_image {
+        height: 10rem;
+    }
+    
+    .featured_image img {
+    }
+    
+    .project_title{
+        font-size: 1.5rem;
+    }
+    
+    .project_block_data {
+    }
+    
+}

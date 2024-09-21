@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contact_page_section {
+    width: 100%;
+    /* height: 90.8vh; */
+    display: flex;
+    align-items: center;
+    /* background-color: khaki; */
+    flex-direction: column;
+}
+
+.contact_page_inner_section {
+    width: 90%;
+    display: flex;
+    gap: 1rem;
+    flex-direction: row-reverse;
+}
+
+.left_contact_us_image_social_icons_container {
+    width: 43%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    /* background-color: khaki; */
+}
+
+.contact_us_animated_image_container {
+    width: 100%;
+    height: 30rem;
+}
+
+.contact_us_animated_image_container img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.contact_us_social_icons_outer_container {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.contact_social_icon_container {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact_social_icon_container .contact_social_icon {
+    font-size: 2.4rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.contact_social_icon_container .contact_social_icon:hover {
+    font-size: 2.8rem;
+}
+
+
+
+
+.right_contact_us_form_container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 0.5rem 0;
+    /* background-color: rebeccapurple; */
+}
+
+.contact_us_form_title {
+    text-transform: uppercase;
+}
+
+.contact_us_form_title p {
+    color: gray;
+}
+
+.contact_us_form_input_container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.first_and_last_name_container {
+    width: 100%;
+    display: flex;
+    gap: 1.2rem;
+}
+
+.first_and_last_name_icon_input_wrapper {
+    width: 50%;
+    display: flex;
+    gap: 1rem;
+    padding: 0.2rem 0;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 0.2rem;
+}
+
+.first_and_last_name_icon_input_wrapper:focus-within{
+    outline: 1.6px solid black;
+}
+
+.first_and_last_name_icon {
+    font-size: 2.2rem;
+    width: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first_and_last_name_input_label_group {
+    width: 88%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.first_and_last_name_input_label_group label {
+    font-size: 0.9rem;
+    font-weight: var(--bold);
+}
+
+.first_and_last_name_input_label_group input {
+    height: 1.8rem;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.contact_email_phone_container_style {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    border-radius: 0.2rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.contact_email_phone_container_style:focus-within {
+    outline: 1.6px solid black;
+}
+
+.email_phone_icon {
+    width: 6%;
+    display: flex;
+    padding: 0.2rem 0.5rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.1rem;
+}
+
+.email_phone_input_container_style {
+    width: 94%;
+}
+
+.email_phone_input_container_style:focus {
+    outline: 1px solid black;
+    outline-offset: 10px;
+}
+
+.email_phone_input_container_style input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+}
+
+.contact_your_thoughts_container{
+    width: 100%;
+}
+
+.contact_message_input_area{
+    width: 100%;
+    height: 10rem;
+    padding: 0.5rem 0.5rem;
+    resize: none;
+    border: none;
+    border-radius: 0.2rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.send_contact_details_btn_container{
+    width: 100%;
+    border-radius: 0.2rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: black;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.send_contact_details_btn_container p{
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    font-weight: var(--bold);
+    color: white;
+    display: flex;
+    user-select: none;
+}
+
+.send_contact_details_btn_container:hover{
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 18px rgb(244, 255, 95);
+}

@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.project_info_new_section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.project_info_actual_inner_container {
+    width: 90%;
+    display: flex;
+    gap: 2.2rem;
+    justify-content: space-between;
+}
+
+
+
+@media screen and (max-width: 900px){
+    .project_info_new_section {
+    }
+
+    .project_info_actual_inner_container {
+        flex-direction: column;
+    }
+}

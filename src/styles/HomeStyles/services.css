@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.my_services_section {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    /* background-color: khaki; */
+}
+
+.quality_services_container {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* padding: 2rem 0; */
+}
+
+.service_head_desc_container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.service_head_desc_container h2 {
+    font-size: 3.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+.service_head_desc_container p {
+    width: 50%;
+    color: var(--textlight);
+    font-size: 1.2rem;
+    line-height: 2rem;
+    text-align: center;
+}
+
+.animae_image_and_service_stack_container {
+    display: flex;
+}
+
+.service_stack {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.service {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.7rem;
+    border-radius: 0.5rem;
+    background-color: var(--bgPrimary);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.service_image {
+    width: 10%;
+    height: 4rem;
+}
+
+.service_image img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
+.service_name {
+    width: 80%;
+    font-size: 1.6rem;
+    padding-left: 1.2rem;
+    color: var(--textDark);
+    font-weight: var(--regular);
+}
+
+.service_redirect_arrow {
+    width: 10%;
+    width: 3rem;
+    height: 3rem;
+}
+
+.service_redirect_arrow img {
+    height: 100%;
+    width: 100%;
+}
+
+.right_animae_image {
+    width: 50%;
+    /* background-color: khaki; */
+}
+
+.animae_image_container {
+    width: 100%;
+    height: 40rem;
+}
+
+.animae_image_container img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/* tab css */
+
+@media screen and (480px < width <=1200px) {
+    .my_services_section {}
+
+    .quality_services_container {}
+
+    .service_head_desc_container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        align-items: center;
+        padding: 2rem 0;
+    }
+
+    .service_head_desc_container h2 {
+        font-size: 3rem;
+        /* done */
+    }
+
+    .service_head_desc_container p {
+        width: 90%;
+        font-size: 0.9rem;
+        line-height: 1.9rem;
+        /* done */
+    }
+
+    .animae_image_and_service_stack_container {}
+
+    .service_stack {
+        margin-top: 0.8rem;
+        gap: 1.1rem;
+        /* this done */
+    }
+
+    .service {
+        padding: 0.8rem;
+        /* done */
+    }
+
+    .service_image {
+        width: 15%;
+        /* done */
+    }
+
+    .service_image img {}
+
+    .service_name {
+        width: 75%;
+        font-size: 1.2rem;
+        padding-bottom: 0.4rem;
+        /* done */
+    }
+
+    .service_redirect_arrow {
+        width: 10%;
+        width: 2rem;
+        height: 2rem;
+        /* done */
+    }
+
+    .service_redirect_arrow img {}
+
+    .right_animae_image {
+        /* display: none; */
+        /* done */
+    }
+
+    .animae_image_container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .animae_image_container img {}
+}
+
+
+
+
+/* middle devices */
+@media screen and (480px < width <= 740px) {
+    .my_services_section {}
+
+    .quality_services_container {}
+
+    .service_head_desc_container {}
+
+    .service_head_desc_container h2 {
+        font-size: 2.2rem;
+        /* done */
+    }
+
+    .service_head_desc_container p {
+        width: 90%;
+        font-size: 0.9rem;
+        line-height: 1.9rem;
+        /* done */
+    }
+
+    .animae_image_and_service_stack_container {}
+
+    .service_stack {
+        width: 100%;
+        gap: 1.1rem;
+        /* done */
+    }
+
+    .service {
+        padding: 0.8rem;
+        /* done */
+    }
+
+    .service_image {
+        width: 15%;
+        /* done */
+    }
+
+    .service_image img {}
+
+    .service_name {
+        width: 75%;
+        font-size: 1.2rem;
+        padding-bottom: 0.4rem;
+        /* done */
+    }
+
+    .service_redirect_arrow {
+        width: 10%;
+        width: 2rem;
+        height: 2rem;
+        /* done */
+    }
+
+    .service_redirect_arrow img {}
+
+    .right_animae_image {
+        display: none;
+        /* done */
+    }
+
+    .animae_image_container {}
+
+    .animae_image_container img {}
+}
+
+
+
+
+
+
+/* mobile css */
+
+@media screen and (max-width:480px) {
+    .my_services_section {}
+
+    .quality_services_container {}
+
+    .service_head_desc_container {}
+
+    .service_head_desc_container h2 {
+        font-size: 2.2rem;
+        /* done */
+    }
+
+    .service_head_desc_container p {
+        width: 90%;
+        font-size: 0.9rem;
+        line-height: 1.9rem;
+        /* done */
+    }
+
+    .animae_image_and_service_stack_container {}
+
+    .service_stack {
+        width: 100%;
+        gap: 1.1rem;
+        /* done */
+    }
+
+    .service {
+        padding: 0.8rem;
+        /* done */
+    }
+
+    .service_image {
+        width: 15%;
+        /* done */
+    }
+
+    .service_image img {}
+
+    .service_name {
+        width: 75%;
+        font-size: 1.2rem;
+        padding-bottom: 0.4rem;
+        /* done */
+    }
+
+    .service_redirect_arrow {
+        width: 10%;
+        width: 2rem;
+        height: 2rem;
+        /* done */
+    }
+
+    .service_redirect_arrow img {}
+
+    .right_animae_image {
+        display: none;
+        /* done */
+    }
+
+    .animae_image_container {}
+
+    .animae_image_container img {}
+}

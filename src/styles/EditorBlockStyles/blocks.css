@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.paragraph_block {
+    line-height: 1.8rem;
+}
+
+.alert_container {
+    width: 100%;
+    border-radius: 0.4rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    /* margin: 1.2rem 0; */
+}
+
+.image_block {
+    width: 100%;
+    height: 25rem;
+}
+
+.image_block img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.list_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    list-style-position: inside;
+}
+
+.list_container .list_item {}
+
+.my_table_wrapper{
+    overflow-x: auto;
+}
+
+.my_table {
+    width: 100%;
+    border-collapse: separate;
+    /* Use separate borders to apply border radius correctly */
+    border-spacing: 0.2rem;
+    /* Remove space between borders */
+    border: 1px solid #ccc;
+    border-radius: 0.2rem;
+    /* Apply border-radius */
+    /* Ensure the content does not overflow the border radius */
+}
+
+.my_table td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 0.5rem 1.2rem;
+}
+
+.my_table tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+
+
+
+/* tab css */
+@media screen and (480px < width <= 1200px) {
+    .paragraph_block {
+        line-height: 1.7rem;
+        font-size: 0.8rem;
+    }
+    
+    .alert_container {
+        width: 100%;
+        border-radius: 0.4rem;
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .image_block {
+        width: 100%;
+        height: 15rem;
+    }
+    
+    .image_block img {
+    }
+    
+    .list_container {
+    }
+    
+    .list_container .list_item {
+        font-size: 0.8rem;
+    }
+    
+    .my_table_wrapper{
+    }
+    
+    .my_table {
+    }
+    
+    .my_table td,
+    th {
+        font-size: 0.9rem;
+        padding: 0.4rem 1rem;
+    }
+    
+    .my_table tr:nth-child(even) {
+    }
+    
+}

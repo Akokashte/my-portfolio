@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn_container {
+    position: relative;
+    text-decoration: none;
+}
+
+.resume_btn {
+    position: relative;
+    width: 13rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    text-align: center;
+    color: var(--textPrimary);
+    font-weight: var(--medium);
+    font-size: 1.3rem;
+    background-color: var(--bgDark);
+    z-index: 20;
+    cursor: pointer;
+}
+
+.shadow_for_btn {
+    position: absolute;
+    left: 0.3rem;
+    top: 0.3rem;
+    width: 13rem;
+    height: 3.5rem;
+    z-index: 10;
+    background-color: var(--bgOrange);
+}
+
+/* tab css */
+
+@media screen and (480px < width <= 1200px) {
+    .btn_container {
+    }
+    
+    .resume_btn {
+        position: relative;
+        width: 11.5rem;
+        height: 3rem;
+        line-height: 3rem;
+        font-size: 1.1rem;
+    }
+    
+    .shadow_for_btn {
+        width: 11.5rem;
+        height: 3rem;
+    }
+}
+
+
+
+
+/* mobile css */
+
+@media  screen and (max-width:480px) { 
+    .resume_btn {
+        width:9.2rem;
+        height: 2.4rem;
+        line-height: 2.4rem;
+        font-size:0.95rem;
+    }
+    
+    .shadow_for_btn {
+        width: 9.2rem;
+        height: 2.4rem;
+    }
+    
+}
+
+@media screen and (740px < width < 929px) {
+    .resume_btn {
+        width:9.2rem;
+        height: 2.3rem;
+        line-height: 2.3rem;
+        font-size:0.89rem;
+    }
+    
+    .shadow_for_btn {
+        width: 9.2rem;
+        height: 2.3rem;
+    }
+}

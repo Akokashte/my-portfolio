@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.education_accordian_container {
+    width: 100%;
+    padding: 1.5rem 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.education_accordian_inner_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.education_accordian_inner_wrapper h2 {
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+.accordian_content_wrapper {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 0.2rem 1.2rem;
+    border-radius: 0.2rem;
+    background-color: white;
+    box-shadow: rgb(122, 119, 119) 0px 0px 0px 1px;
+}
+
+.education_icon {}
+
+.education_icon i {
+    font-size: 5rem;
+}
+
+.accordian_content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.accordian_content .standard_container {
+
+}
+
+.accordian_content .standard_container p {
+    font-size: 1.3rem;
+    font-weight: var(--semibold);
+}
+
+.college_name_container {
+
+}
+
+.college_name_container p {
+    font-size: 1rem;
+    font-weight: var(--regular);
+    color: rgb(99, 97, 97);
+}
+
+.year_and_cgpa {
+    display: flex;
+    gap: 1rem;
+}
+
+.year_and_cgpa p{
+    font-weight: var(--regular);
+}
+
+.about_education_card_wrapper{
+    width: 100%;
+    display: flex;
+    gap: 1.2rem;
+}
+
+
+/* tab css */
+@media screen and (900px < width <= 1200px) {
+    .education_accordian_container {
+        width: 100%;
+        padding: 1.5rem 0;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+    
+    .education_accordian_inner_wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .education_accordian_inner_wrapper h2 {
+        font-size: 2rem;
+        /* this done */
+    }
+    
+    .accordian_content_wrapper {
+        gap: 2rem;
+        /* this done */
+    }
+    
+    .education_icon {
+    }
+    
+    .education_icon i {
+        font-size: 3.2rem;
+        /* this done */
+    }
+    
+    .accordian_content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+    
+    .accordian_content .standard_container {
+    
+    }
+    
+    .accordian_content .standard_container p {
+        font-size: 1rem;
+        /* this done */
+    }
+    
+    .college_name_container {
+    
+    }
+    
+    .college_name_container p {
+        font-size: 0.8rem;
+        /* this done */
+    }
+    
+    .year_and_cgpa {
+        gap: 0.5rem;
+        /* this done */
+    }
+    
+    .year_and_cgpa p{
+        font-weight: var(--regular);
+        font-size: 0.8rem;
+    }
+    
+    .about_education_card_wrapper{
+        width: 100%;
+        display: flex;
+        gap: 1.2rem;
+    }
+       
+}
+
+
+@media screen and (480px < width < 905px) {
+    .education_accordian_container {
+      padding: 1rem 0;
+    }
+    
+    .education_accordian_inner_wrapper h2 {
+       font-size: 2.5rem;
+    }
+    
+    .accordian_content_wrapper {
+        width: 100%;
+        padding: 0.5rem 1.2rem;
+    }
+    
+    .education_icon i {
+        font-size: 3.5rem;
+    }
+    
+    .accordian_content .standard_container p {
+       font-size: 1.2rem;
+    }
+    
+    .college_name_container p {
+       font-size: 0.9rem;
+    }
+    
+    .year_and_cgpa p{
+        font-size: 1rem;
+    }
+
+    .about_education_card_wrapper{
+        flex-direction: column;
+    }
+    
+}
+
+
+
+/* mobile css */
+
+@media screen and (max-width:480px) {
+    .education_accordian_container {
+      padding: 1rem 0;
+    }
+    
+    .education_accordian_inner_wrapper {
+    }
+    
+    .education_accordian_inner_wrapper h2 {
+       font-size: 2.2rem;
+    }
+    
+    .accordian_content_wrapper {
+        width: 100%;
+        padding: 0.5rem 1.2rem;
+    }
+    
+    .education_icon {
+
+    }
+    
+    .education_icon i {
+        font-size: 3rem;
+    }
+    
+    .accordian_content {
+       
+    }
+    
+    .accordian_content .standard_container {
+    
+    }
+    
+    .accordian_content .standard_container p {
+       font-size: 1.1rem;
+    }
+    
+    .college_name_container {
+    
+    }
+    
+    .college_name_container p {
+       font-size: 0.8rem;
+    }
+    
+    .year_and_cgpa {
+       
+    }
+    
+    .year_and_cgpa p{
+        font-size: 0.9rem;
+    }
+    
+    .about_education_card_wrapper{
+        flex-direction: column;
+    } 
+}
