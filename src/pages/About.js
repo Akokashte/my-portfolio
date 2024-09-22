@@ -36,7 +36,7 @@ const About = () => {
             linkUrl: ""
         },
     ]
-
+ 
     const dispatch = useDispatch()
     const publicTechStackData = useSelector((state) => state.techStack.techStackData)
 
