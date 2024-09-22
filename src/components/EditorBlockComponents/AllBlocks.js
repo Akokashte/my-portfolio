@@ -48,7 +48,7 @@ const alertStyles = {
 const HeaderBlock = ({ data }) => {
     const Tag = `h${data.level}`
     return (
-        <motion.Tag
+        <motion.div
             initial={{
                 y: 100,
                 opacity: 0
@@ -62,8 +62,10 @@ const HeaderBlock = ({ data }) => {
                 }
             }}
         >
-            {data.text}
-        </motion.Tag>
+            <Tag>
+                {data.text}
+            </Tag>
+        </motion.div>
     )
 }
 
