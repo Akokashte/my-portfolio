@@ -13,12 +13,12 @@ const About = () => {
         {
             icon: <i className="fi fi-rr-resume btn_icon"></i>,
             linkTitle: "Resume",
-            linkUrl: ""
+            linkUrl: "https://drive.google.com/file/d/1JfA4bAsVXwJ7sn98R_b6U5CASqpx33tg/view?usp=sharing"
         },
         {
             icon: <i className="fi fi-brands-linkedin btn_icon"></i>,
             linkTitle: "Linkedin",
-            linkUrl: ""
+            linkUrl: "https://www.linkedin.com/in/ankitkashte"
         },
         {
             icon: <i className="fi fi-brands-instagram btn_icon"></i>,
@@ -33,7 +33,7 @@ const About = () => {
         {
             icon: <i className="fi fi-brands-github btn_icon"></i>,
             linkTitle: "GitHub",
-            linkUrl: ""
+            linkUrl: "https://github.com/Akokashte"
         },
     ]
  
