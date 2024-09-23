@@ -45,8 +45,9 @@ const alertStyles = {
     },
 }
 
+
 const HeaderBlock = ({ data }) => {
-    const Tag = `h${data.level}`
+    const TagHead = `h${data.level}`
     return (
         <motion.div
             initial={{
@@ -62,30 +63,17 @@ const HeaderBlock = ({ data }) => {
                 }
             }}
         >
-            <Tag>
+            <TagHead>
                 {data.text}
-            </Tag>
+            </TagHead>
         </motion.div>
     )
 }
 
 const ParagraphBlock = ({ data }) => {
+
     return (
-        <motion.p
-            className="paragraph_block"
-            initial={{
-                y: 100,
-                opacity: 0
-            }}
-            whileInView={{
-                y: 0,
-                opacity: 1,
-                transition: {
-                    duration: 0.6,
-                    ease: "easeInOut"
-                }
-            }}
-        >{data.text}</motion.p>
+       <p dangerouslySetInnerHTML={{ __html: data.text }} />
     )
 }
 
@@ -111,9 +99,9 @@ const ImageBlock = ({ data }) => {
     )
 }
 
-const OrderedListBlock = ({ data, Tag }) => {
+const OrderedListBlock = ({ data, TagList }) => {
     return (
-        <motion.Tag
+        <motion.TagList
             className="list_container"
             initial={{
                 y: 100,
@@ -134,12 +122,12 @@ const OrderedListBlock = ({ data, Tag }) => {
                         {listItem.content}
                         {
                             Array.isArray(listItem.items) && listItem.items.length > 0 &&
-                            <OrderedListBlock data={listItem} Tag={Tag} />
+                            <OrderedListBlock data={listItem} TagList={TagList} />
                         }
                     </li>
                 })
             }
-        </motion.Tag>
+        </motion.TagList>
     )
 }
 
@@ -214,6 +202,7 @@ const TableBlock = ({ data }) => {
         </motion.div>
     )
 }
+
 
 export {
     HeaderBlock,
