@@ -10,11 +10,18 @@ import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import ErrorPage from "./pages/ErrorPage";
+import Loader from "./components/Loader";
+import { useSelector } from "react-redux";
 
 function App() {
+  const loading = useSelector((state) => state.contact.loading)
+
   return (
     <>
       <ScrollToTop />
+      {
+        loading ? <Loader /> : null
+      }
       <ToastContainer position="top-right" />
       <Navbar />
       <Routes>

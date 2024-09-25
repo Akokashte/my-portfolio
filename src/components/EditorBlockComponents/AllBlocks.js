@@ -58,7 +58,7 @@ const HeaderBlock = ({ data }) => {
                 y: 0,
                 opacity: 1,
                 transition: {
-                    duration: 0.6,
+                    duration: 0.4,
                     ease: "easeInOut"
                 }
             }}
@@ -89,7 +89,7 @@ const ImageBlock = ({ data }) => {
                 y: 0,
                 opacity: 1,
                 transition: {
-                    duration: 0.6,
+                    duration: 0.4,
                     ease: "easeInOut"
                 }
             }}
@@ -111,7 +111,7 @@ const OrderedListBlock = ({ data, TagList }) => {
                 y: 0,
                 opacity: 1,
                 transition: {
-                    duration: 0.6,
+                    duration: 0.4,
                     ease: "easeInOut"
                 }
             }}
@@ -153,7 +153,7 @@ const AlertBlock = ({ data }) => {
                 y: 0,
                 opacity: 1,
                 transition: {
-                    duration: 0.6,
+                    duration: 0.4,
                     ease: "easeInOut"
                 }
             }}
@@ -174,7 +174,7 @@ const TableBlock = ({ data }) => {
                 y: 0,
                 opacity: 1,
                 transition: {
-                    duration: 0.6,
+                    duration: 0.4,
                     ease: "easeInOut"
                 }
             }}

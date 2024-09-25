@@ -105,7 +105,7 @@
     border-radius: 0.2rem;
 }
 
-.first_and_last_name_icon_input_wrapper:focus-within{
+.first_and_last_name_icon_input_wrapper:focus-within {
     outline: 1.6px solid black;
 }
 
@@ -134,6 +134,11 @@
     width: 100%;
     border: none;
     outline: none;
+}
+
+.first_and_last_name_input_label_group input::placeholder {
+   font-weight: var(--regular);
+   font-size: 1rem;
 }
 
 .contact_email_phone_container_style {
@@ -173,11 +178,11 @@
     outline: none;
 }
 
-.contact_your_thoughts_container{
+.contact_your_thoughts_container {
     width: 100%;
 }
 
-.contact_message_input_area{
+.contact_message_input_area {
     width: 100%;
     height: 10rem;
     padding: 0.5rem 0.5rem;
@@ -187,28 +192,202 @@
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
-.send_contact_details_btn_container{
+.contact_message_input_area::placeholder {
+    font-size: 1rem;
+    color: var(--textlight);
+    font-weight: var(--regular);
+}
+
+.send_contact_details_btn_container {
     width: 100%;
     border-radius: 0.2rem;
     height: 3.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
+    gap: 0.5rem;
     background-color: black;
     transition: background-color 0.2s ease-in-out;
 }
 
-.send_contact_details_btn_container p{
+.send_contact_details_btn_container input {
+    height: 100%;
+    width: 100%;
     font-size: 1.4rem;
     text-transform: capitalize;
     font-weight: var(--bold);
     color: white;
     display: flex;
     user-select: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.2rem;
+    background-color: black;
 }
 
-.send_contact_details_btn_container:hover{
+.send_contact_details_btn_container:hover {
     color: rgba(255, 255, 255, 1);
     box-shadow: 0 5px 18px rgb(244, 255, 95);
+}
+
+
+
+@media screen and (480px < width <= 1200px) {
+    .contact_page_section {
+    }
+    
+    .contact_page_inner_section {
+        flex-direction: column-reverse;
+    }
+    
+    .left_contact_us_image_social_icons_container {
+        display: none;
+    }
+    
+
+
+    
+    .right_contact_us_form_container {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .contact_us_form_title h2{
+        font-size: 1.5rem;
+    }
+    
+    .contact_us_form_title p {
+        /* font-size: 0.7rem; */
+    }
+
+    .first_and_last_name_icon {
+        font-size: 1.7rem;
+        width: 14%;
+    }
+    
+    .first_and_last_name_input_label_group {
+        gap: 0.1rem;
+    }
+    
+    .first_and_last_name_input_label_group label {
+        font-size: 0.9rem;
+    }
+    
+    .first_and_last_name_input_label_group input {
+        height: 1.5rem;
+    }
+    
+    .first_and_last_name_input_label_group input::placeholder {
+       font-size: 1rem;
+    }
+
+    .contact_email_phone_container_style input{
+        font-size-adjust: 1.2rem;
+    }
+    
+    .email_phone_icon {
+        width: 7.2%;
+        font-size:1.7rem;
+    }
+    
+    .email_phone_input_container_style {
+        width: 92.8%;
+    }
+
+    .email_phone_input_container_style input::placeholder {
+       font-size: 0.9rem;
+    }
+    
+    .contact_message_input_area::placeholder {
+        font-size: 0.9rem;
+    }
+    
+    .send_contact_details_btn_container input {
+        font-size: 1.35rem;
+    }
+}
+
+
+
+
+
+
+
+@media screen and (max-width:480px) {
+    .contact_page_section {
+    }
+    
+    .contact_page_inner_section {
+    }
+    
+    .left_contact_us_image_social_icons_container {
+        display: none;
+    }
+    
+
+
+    
+    .right_contact_us_form_container {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .contact_us_form_title h2{
+        font-size: 1.1rem;
+    }
+    
+    .contact_us_form_title p {
+        font-size: 0.5rem;
+    }
+
+    .first_and_last_name_icon {
+        font-size: 1.2rem;
+        width: 14%;
+    }
+    
+    .first_and_last_name_input_label_group {
+        gap: 0.1rem;
+    }
+    
+    .first_and_last_name_input_label_group label {
+        font-size: 0.8rem;
+    }
+    
+    .first_and_last_name_input_label_group input {
+        height: 1.5rem;
+    }
+    
+    .first_and_last_name_input_label_group input::placeholder {
+       font-size: 0.8rem;
+    }
+
+    .contact_email_phone_container_style{
+        gap: 0.7rem;
+    }
+
+    .contact_email_phone_container_style input{
+        font-size-adjust: 1.2rem;
+    }
+    
+    .email_phone_icon {
+        width: 7.2%;
+        font-size:1.3rem;
+    }
+    
+    .email_phone_input_container_style {
+        width: 92.8%;
+    }
+
+    .email_phone_input_container_style input::placeholder {
+       font-size: 0.8rem;
+    }
+    
+    .contact_message_input_area::placeholder {
+        font-size: 0.8rem;
+    }
+    
+    .send_contact_details_btn_container input {
+        font-size: 1.3rem;
+    }
 }

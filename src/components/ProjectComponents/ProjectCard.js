@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 const ProjectCard = ({ curProject }) => {
     const [width, setWidth] = useState(window.outerWidth)
     const navigate = useNavigate()
-    console.log(width)
 
     useEffect(() => {
         const handleResize = () => setWidth(window.innerWidth);

@@ -1,6 +1,8 @@
 import React from "react";
 import "../styles/footer.css";
 import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
+import {  openGitHubLink, openInstagramLink, openLinkedinLink } from "./AllLinks";
 
 const Footer = () => {
     const activeLinkStyle = ({ isActive }) => ({
@@ -30,20 +32,32 @@ const Footer = () => {
                             <NavLink to={"/about"} className="footer_link" style={activeLinkStyle}>
                                 About Me
                             </NavLink>
-                            {/* <NavLink to={"/contact"} className="footer_link" style={activeLinkStyle}>
-                                Contact
-                            </NavLink> */}
+                            <NavLink to={"/contact"} className="footer_link" style={activeLinkStyle}>
+                                Contact Me
+                            </NavLink>
                         </div>
                         <div className="social_icon_container">
-                            <div className="icon">
+                            <motion.div
+                                whileTap={{ scale: 0.85 }}
+                                className="icon"
+                                onClick={openGitHubLink}
+                            >
                                 <img src="github.webp" alt="icon here" />
-                            </div>
-                            <div className="icon">
+                            </motion.div>
+                            <motion.div
+                                whileTap={{ scale: 0.85 }}
+                                className="icon"
+                                onClick={openLinkedinLink}
+                            >
                                 <img src="linkedin.webp" alt="icon here" />
-                            </div>
-                            <div className="icon">
+                            </motion.div>
+                            <motion.div
+                                whileTap={{ scale: 0.85 }}
+                                onClick={openInstagramLink}
+                                className="icon"
+                            >
                                 <img src="instagram.webp" alt="icon here" />
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 </div>

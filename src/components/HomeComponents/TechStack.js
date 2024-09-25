@@ -6,6 +6,7 @@ import { setRecentTechStack } from "../../features/techStackSlice";
 import { useNavigate } from "react-router-dom";
 import { notifyError } from "../../utils/toastfy/Notification";
 import { motion } from "framer-motion";
+import Loader from "../Loader";
 
 const TechStack = () => {
     const dispatch = useDispatch()
@@ -62,6 +63,7 @@ const TechStack = () => {
                     <div className="my_techstack_container">
                         <div className="techstacks_wrapper">
                             {
+                                !recentTechStackData ? <Loader /> :
                                 recentTechStackData.map((curTechStack, index) => {
                                     return (
                                         <motion.div

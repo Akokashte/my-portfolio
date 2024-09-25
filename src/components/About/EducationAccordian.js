@@ -10,21 +10,21 @@ const EducationAccordian = () => {
             collegeName: "Gharda Institute Of Technology, Lavel",
             passoutYear: "2024",
             grade: "9.16 CGPA",
-            icon: <i class="fi fi-tr-graduation-cap"></i>
+            icon: <i className="fi fi-tr-graduation-cap"></i>
         },
         {
             standard: "12th (CBSE)",
             collegeName: "Rotary English Medium School, Khed",
             passoutYear: "2020",
             grade: "86.40 %",
-            icon: <i class="fi fi-ts-book-alt"></i>
+            icon: <i className="fi fi-ts-book-alt"></i>
         },
         {
             standard: "10th (SSC)",
             collegeName: "Dr. Vr. Ghole Highschool, Wakavali",
             passoutYear: "2018",
             grade: "89 %",
-            icon: <i class="fi fi-ts-workshop"></i>
+            icon: <i className="fi fi-ts-workshop"></i>
         },
 
     ]

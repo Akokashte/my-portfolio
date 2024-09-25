@@ -28,7 +28,7 @@ const TechStackCard = ({techStackName,techStackImage,techStackPercentage}) => {
                         <div className="tag_percent_wrapper">
                             <div className="percent_icon_container">
                                 <p>{techStackPercentage}</p>
-                                <i class="fi fi-sr-percentage"></i>
+                                <i className="fi fi-sr-percentage"></i>
                             </div>
                         </div>
                     </div>

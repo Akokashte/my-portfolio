@@ -62,6 +62,7 @@ const Service = () => {
                                             x: -100,
                                             opacity: 0
                                         }}
+                                        key={index}
                                         className="service"
                                     >
                                         <div className="service_image">

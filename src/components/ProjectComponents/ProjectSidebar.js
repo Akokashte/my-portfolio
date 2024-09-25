@@ -5,6 +5,7 @@ import axios from "axios";
 import "../../styles/ProjectStyles/projectSidebar.css";
 import { setRecentProjectData } from "../../features/projectSlice";
 import { motion } from "framer-motion";
+import Loader from "../Loader";
 
 const ProjectSidebar = () => {
     const recentProjectData = useSelector((state) => state.project.recentProjectData)
@@ -46,6 +47,7 @@ const ProjectSidebar = () => {
                 <h2 className="project_sidebar_heading">Recent Projects</h2>
                 <div className="project_sidebar_container">
                     {
+                        !recentProjectData ? <Loader /> :
                         recentProjectData.map((recentProjectData, index) => (
                             <ProjectSmallCard key={index} featuredImage={recentProjectData.featuredImage} projectTitle={recentProjectData.title} url={recentProjectData.url} />
                         ))

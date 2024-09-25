@@ -2,9 +2,14 @@ import React from "react";
 import "../../styles/HomeStyles/hero.css";
 import GetResume from "../AllButtons/GetResume";
 import LinkedinLink from "../AllButtons/LinkedinLink";
-import {  motion } from "framer-motion";
+import { motion } from "framer-motion";
+import { useDispatch, useSelector } from "react-redux";
+import { callContactApi, setContactData } from "../../features/contactSlice";
 
 const Hero = () => {
+    const contactFormData = useSelector((state) => state.contact.contactData)
+
+    const dispatch = useDispatch()
     const name = "Ankit Vinayak Kashte".split("");
     const developerText = "Developer".split("");
     const techStack = [
@@ -26,6 +31,13 @@ const Hero = () => {
         }
     ]
 
+    const handleContactFormInputChange = (e) => {
+        dispatch(setContactData({ ...contactFormData, [e.target.name]: e.target.value }))
+    }
+
+    const handleContactFormSubmit = (e) => {
+        dispatch(callContactApi(contactFormData))
+    }
 
     return (
         <>
@@ -172,16 +184,18 @@ const Hero = () => {
                                         </p>
                                     </div>
                                     <div className="star_icon_container">
-                                        <motion.img src="stars.webp" alt="star_icon here"
-                                            initial={{ opacity: 0 }}
-                                            animate={{
-                                                opacity: [0, 1, 0],
-                                                transition: {
-                                                    duration: 1,
-                                                    repeat: Infinity
-                                                }
-                                            }}
-                                        />
+                                        {
+                                            <motion.img src="stars.webp" alt="star_icon here"
+                                                initial={{ opacity: 0 }}
+                                                animate={{
+                                                    opacity: [0, 1, 0],
+                                                    transition: {
+                                                        duration: 1,
+                                                        repeat: Infinity
+                                                    }
+                                                }}
+                                            />
+                                        }
                                     </div>
                                 </div>
                                 <div className="actual_form_content_wrapper">
@@ -189,32 +203,32 @@ const Hero = () => {
                                         <div className="label_input_group">
                                             <p>Name</p>
                                             <div className="inputcover">
-                                                <input type="text" name="name" id="name" placeholder="Ankit" />
+                                                <input type="text" name="fname" value={contactFormData.fname} onChange={handleContactFormInputChange} placeholder="Ankit" />
                                             </div>
                                         </div>
                                         <div className="label_input_group">
                                             <p>Surname</p>
                                             <div className="inputcover">
-                                                <input type="text" name="name" id="name" placeholder="Kashte" />
+                                                <input type="text" name="surname" value={contactFormData.surname} onChange={handleContactFormInputChange} placeholder="Kashte" />
                                             </div>
                                         </div>
                                     </div>
                                     <div className="phone_email_label_input_group">
                                         <div className="phone_email_inputcover">
-                                            <input type="text" name="name" id="name" placeholder="Phone Number" />
+                                            <input type="number" name="phoneNumber" value={contactFormData.phoneNumber} onChange={handleContactFormInputChange} placeholder="Phone Number" />
                                         </div>
                                     </div>
                                     <div className="phone_email_label_input_group">
                                         <div className="phone_email_inputcover">
-                                            <input type="text" name="name" id="name" placeholder="Email" />
+                                            <input type="text" name="email" value={contactFormData.email} onChange={handleContactFormInputChange} placeholder="Email" />
                                         </div>
                                     </div>
                                     <div className="phone_email_label_input_group">
                                         <div className="phone_email_inputcover">
-                                            <input type="text" name="name" id="name" placeholder="Type your Message" />
+                                            <input type="text" name="message" value={contactFormData.message} onChange={handleContactFormInputChange} placeholder="Type your Message" />
                                         </div>
                                     </div>
-                                    <div className="contact_btn_container">
+                                    <div className="contact_btn_container" onClick={handleContactFormSubmit}>
                                         <div className="contact_submit_btn">
                                             Get In Touch
                                         </div>

@@ -97,14 +97,14 @@
 }
 
 .copyright_section p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 
 
 
 /* tab css */
-@media screen and (480px < width <=1200px) {
+@media screen and (800px < width <=1200px) {
     .footer_section {
     }
 
@@ -133,20 +133,84 @@
 
     .navigation_links_for_footer {
         width: 70%;
+        gap: 1.2rem;
     }
 
     .navigation_links_for_footer .footer_link {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
 
     .social_icon_container {
-        width: 15%;
+        width: 14%;
         gap: 1.1rem;
     }
 
     .social_icon_container .icon {
         width: 3.5rem;
         height: 3.5rem;
+    }
+
+    .social_icon_container .icon img {
+    }
+
+    .copyright_section {
+        height: 4.5rem;
+    }
+
+    .copyright_section p {
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (480px < width <= 800px) {
+    .footer_section {
+    }
+
+    .footer {
+    }
+
+    .footer_meta_content {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .logo_name_container {
+        width: 100%;
+        justify-content: center;
+        gap: 0.3rem;
+    }
+
+    .logo_name_container h1 {
+        font-size: 1.5rem;
+    }
+
+    .logo_image_container {
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+
+    .logo_image_container img {
+    }
+
+    .navigation_links_for_footer {
+        width: 100%;
+        gap: 1.2rem;
+    }
+
+    .navigation_links_for_footer .footer_link {
+        font-size: 1.1rem;
+    }
+
+    .social_icon_container {
+        width: 100%;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .social_icon_container .icon {
+        width: 2rem;
+        height: 2rem;
     }
 
     .social_icon_container .icon img {
@@ -197,7 +261,9 @@
         gap: 1.5rem;
     }
 
-    .navigation_links_for_footer .footer_link {}
+    .navigation_links_for_footer .footer_link {
+        font-size: 1.2rem;
+    }
 
     .social_icon_container {
         width: auto;
@@ -215,6 +281,6 @@
     .copyright_section {}
 
     .copyright_section p {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 }

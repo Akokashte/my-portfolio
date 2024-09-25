@@ -6,6 +6,7 @@ import { setRecentProjectData } from "../../features/projectSlice";
 import { useNavigate } from "react-router-dom";
 import { notifyError } from "../../utils/toastfy/Notification";
 import { motion } from "framer-motion";
+import Loader from "../Loader";
 
 const RecentProjects = () => {
     const [currentScreenWidth, setCurrentScreenWidth] = useState()
@@ -73,7 +74,8 @@ const RecentProjects = () => {
                                 }
                             }}
                         >
-                            {
+                        {
+                            !recentProjectData ? <Loader />:
                                 recentProjectData.map((curRecentProject, index) => {
                                     return <motion.div
                                         initial={{ y: 100, opacity: 0 }}
@@ -103,7 +105,8 @@ const RecentProjects = () => {
                                         </div>
                                     </motion.div>
                                 })
-                            }
+
+                        }
                         </motion.div>
                     </div>
                 </div>

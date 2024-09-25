@@ -2,6 +2,7 @@ import React from "react";
 import "../../styles/ProjectStyles/projectInfoLeftComponent.css";
 import BlockRenderer from "../EditorBlockComponents/BlockRenderer";
 import { motion } from "framer-motion";
+import Loader from "../Loader";
 
 const ProjectInfoLeftComponent = ({ title, featuredImage, projectEditorBlocksData }) => {
 
@@ -46,6 +47,7 @@ const ProjectInfoLeftComponent = ({ title, featuredImage, projectEditorBlocksDat
                     </div>
                     <div className="project_block_data">
                         {
+                            !projectEditorBlocksData ? <Loader /> :
                             projectEditorBlocksData.map((block, index) => {
                                 return <BlockRenderer key={index} block={block} />
                             })

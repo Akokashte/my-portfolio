@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setTechStackData } from "../features/techStackSlice";
 import axios from "axios";
 import { motion } from "framer-motion";
+import Loader from "../components/Loader";
 
 const About = () => {
     const allAboutUsLinks = [
@@ -134,7 +135,7 @@ const About = () => {
                         {
                             allAboutUsLinks.map((currentLink, index) => {
                                 return (
-                                    <AboutUsLinkBtn index={index} icon={currentLink.icon} linkTitle={currentLink.linkTitle} />
+                                    <AboutUsLinkBtn key={index} index={index} icon={currentLink.icon} linkTitle={currentLink.linkTitle} />
                                 )
                             })
                         }
@@ -168,8 +169,9 @@ const About = () => {
                         >My Skills</motion.h2>
                         <div className="about_skills_inner_wrapper">
                             {
+                                !publicTechStackData ? <Loader /> :
                                 publicTechStackData.map((curTechStack, index) => {
-                                    return <TechStackCard techStackName={curTechStack.name} techStackImage={curTechStack.techStackImage} techStackPercentage={curTechStack.skillPercentage} />
+                                    return <TechStackCard key={index} techStackName={curTechStack.name} techStackImage={curTechStack.techStackImage} techStackPercentage={curTechStack.skillPercentage} />
                                 })
                             }
                         </div>

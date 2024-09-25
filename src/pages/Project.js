@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setProjectData } from "../features/projectSlice";
 import { notifyError } from "../utils/toastfy/Notification";
 import { motion } from "framer-motion";
+import Loader from "../components/Loader";
 
 const Project = () => {
     const dispatch = useDispatch()
@@ -62,6 +63,7 @@ const Project = () => {
                         </motion.p>
                     </div>
                     {
+                        !projectData ? <Loader /> :
                         projectData.map((curProject, index) => {
                             return <ProjectCard key={index} curProject={curProject} />
                         })
