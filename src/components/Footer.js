@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/footer.css";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
-import {  openGitHubLink, openInstagramLink, openLinkedinLink } from "./AllLinks";
+import { openGitHubLink, openInstagramLink, openLinkedinLink, socialMediaIconLinks } from "./AllLinks";
 
 const Footer = () => {
     const activeLinkStyle = ({ isActive }) => ({
@@ -16,7 +16,7 @@ const Footer = () => {
                     <div className="footer_meta_content">
                         <div className="logo_name_container">
                             <div className="logo_image_container">
-                                <img src="man.webp" alt="logo pic" />
+                                <img src={socialMediaIconLinks.mylogoLink} alt="logo pic" />
                             </div>
                             <h1>
                                 AK
@@ -42,21 +42,21 @@ const Footer = () => {
                                 className="icon"
                                 onClick={openGitHubLink}
                             >
-                                <img src="github.webp" alt="icon here" />
+                                <img src={socialMediaIconLinks.githubIconLink} alt="icon here" />
                             </motion.div>
                             <motion.div
                                 whileTap={{ scale: 0.85 }}
                                 className="icon"
                                 onClick={openLinkedinLink}
                             >
-                                <img src="linkedin.webp" alt="icon here" />
+                                <img src={socialMediaIconLinks.linkedinIconLink} alt="icon here" />
                             </motion.div>
                             <motion.div
                                 whileTap={{ scale: 0.85 }}
                                 onClick={openInstagramLink}
                                 className="icon"
                             >
-                                <img src="instagram.webp" alt="icon here" />
+                                <img src={socialMediaIconLinks.instagramIconLink} alt="icon here" />
                             </motion.div>
                         </div>
                     </div>

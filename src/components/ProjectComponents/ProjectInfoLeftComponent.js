@@ -32,7 +32,7 @@ const ProjectInfoLeftComponent = ({ title, featuredImage, projectEditorBlocksDat
                         <motion.h2
                             initial={{
                                 opacity: 0,
-                                y: 100
+                                y: 80
                             }}
                             whileInView={{
                                 opacity: 1,

@@ -51,11 +51,9 @@ const HeaderBlock = ({ data }) => {
     return (
         <motion.div
             initial={{
-                y: 100,
                 opacity: 0
             }}
             whileInView={{
-                y: 0,
                 opacity: 1,
                 transition: {
                     duration: 0.4,
@@ -82,11 +80,9 @@ const ImageBlock = ({ data }) => {
         <motion.div
             className="image_block"
             initial={{
-                y: 100,
                 opacity: 0
             }}
             whileInView={{
-                y: 0,
                 opacity: 1,
                 transition: {
                     duration: 0.4,
@@ -104,11 +100,9 @@ const OrderedListBlock = ({ data, TagList }) => {
         <motion.TagList
             className="list_container"
             initial={{
-                y: 100,
                 opacity: 0
             }}
             whileInView={{
-                y: 0,
                 opacity: 1,
                 transition: {
                     duration: 0.4,
@@ -146,11 +140,9 @@ const AlertBlock = ({ data }) => {
             className="alert_container"
             style={{ textAlign: `${data.align}`, ...alertStyles[`${data.type}`] }}
             initial={{
-                y: 100,
                 opacity: 0
             }}
             whileInView={{
-                y: 0,
                 opacity: 1,
                 transition: {
                     duration: 0.4,
@@ -167,11 +159,9 @@ const TableBlock = ({ data }) => {
     return (
         <motion.div
             initial={{
-                y: 100,
                 opacity: 0
             }}
             whileInView={{
-                y: 0,
                 opacity: 1,
                 transition: {
                     duration: 0.4,

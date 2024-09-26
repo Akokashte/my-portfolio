@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import "../styles/navbar.css";
 import { NavLink } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { openGitHubLink, openInstagramLink, openLinkedinLink, openTwitterLink } from "./AllLinks";
+import { openFacebookLink, openGitHubLink, openInstagramLink, openLinkedinLink, socialMediaIconLinks } from "./AllLinks";
 
 const Navbar = () => {
     const [hamburgerClicked, setHamburgerClicked] = useState(false)
     const [isHovered, setIsHovered] = useState(false)
-    const logoUrl = "https://res.cloudinary.com/dy2inzope/image/upload/v1723015883/bon4b4k7ulg9g4qmg9tn.webp"
 
     const activeLinkStyle = ({ isActive }) => ({
         color: isActive ? "var(--textExtraLightBlue)" : "var(--textDark)"
@@ -28,7 +27,7 @@ const Navbar = () => {
                 <div className="navbar">
                     <div className="logo_container">
                         <div className="logo_image">
-                            <img src={logoUrl} alt="my logo here" />
+                            <img src={socialMediaIconLinks.mylogoLink} alt="my logo here" />
                         </div>
                         <h1 className="logo_title">AK</h1>
                     </div>
@@ -64,7 +63,7 @@ const Navbar = () => {
                             <div className="logo_hamburger_container">
                                 <div className="logo_container">
                                     <div className="logo_image">
-                                        <img src={logoUrl} alt="my logo here" />
+                                        <img src={socialMediaIconLinks.mylogoLink} alt="my logo here" />
                                     </div>
                                     <h1 className="logo_title">AK</h1>
                                 </div>
@@ -101,16 +100,16 @@ const Navbar = () => {
                             <span className="connect_text">Let's Go & Connect With ME</span>
                             <div className="social_media_icons_container">
                                 <div className="social_media_icon" onClick={openGitHubLink}>
-                                    <img src="github.webp" alt="icon here" />
+                                    <img src={socialMediaIconLinks.githubIconLink} alt="icon here" />
                                 </div>
                                 <div className="social_media_icon" onClick={openLinkedinLink}>
-                                    <img src="linkedin.webp" alt="icon here" />
+                                    <img src={socialMediaIconLinks.linkedinIconLink} alt="icon here" />
                                 </div>
                                 <div className="social_media_icon" onClick={openInstagramLink}>
-                                    <img src="instagram.webp" alt="icon here" />
+                                    <img src={socialMediaIconLinks.instagramIconLink} alt="icon here" />
                                 </div>
-                                <div className="social_media_icon" onClick={openTwitterLink}>
-                                    <img src="twitter.webp" alt="icon here" />
+                                <div className="social_media_icon" onClick={openFacebookLink}>
+                                    <img src={socialMediaIconLinks.facebookIconLink} alt="icon here" />
                                 </div>
                             </div>
                         </div>

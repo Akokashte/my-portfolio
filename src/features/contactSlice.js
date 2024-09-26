@@ -95,6 +95,13 @@ export const callContactApi = (contactFormData) => async (dispatch) => {
             notifySuccess("Contact form submitted successfully!");
         }
     } catch (error) {
+        dispatch(setContactData({
+            fname: "",
+            surname: "",
+            email: "",
+            phoneNumber: "",
+            message: ""
+        }))
         notifyError("Something went wrong while submitting the contact form!");
     } finally {
         dispatch(setLoading(false));
