@@ -213,6 +213,7 @@
 .send_contact_details_btn_container input {
     height: 100%;
     width: 100%;
+    text-align: center;
     font-size: 1.4rem;
     text-transform: capitalize;
     font-weight: var(--bold);
