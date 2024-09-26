@@ -95,9 +95,10 @@ const ImageBlock = ({ data }) => {
     )
 }
 
-const OrderedListBlock = ({ data, TagList }) => {
+const OrderedListBlock = ({ data, Tag }) => {
+    console.log(data)
     return (
-        <motion.TagList
+        <Tag
             className="list_container"
             initial={{
                 opacity: 0
@@ -112,16 +113,16 @@ const OrderedListBlock = ({ data, TagList }) => {
         >
             {
                 data.items.map((listItem, index) => {
-                    return <li className="list_item" key={index} style={{ paddingLeft: "0.9rem" }}>
+                    return <li className="list_item" key={index} style={{ paddingLeft: "0.9rem" }} >
                         {listItem.content}
                         {
                             Array.isArray(listItem.items) && listItem.items.length > 0 &&
-                            <OrderedListBlock data={listItem} TagList={TagList} />
+                            <OrderedListBlock data={listItem} Tag={Tag} />
                         }
                     </li>
                 })
             }
-        </motion.TagList>
+        </Tag>
     )
 }
 

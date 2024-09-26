@@ -78,7 +78,6 @@ const TechStack = () => {
                                                 delay:index*0.2
                                             }
                                             }} 
-                                            exit={{y:100, opacity: 0 }} 
                                         >
                                             <div className="mytech_icon_and_title_group">
                                                 <div className="mytech_icon">

@@ -5,6 +5,7 @@ import LinkedinLink from "../AllButtons/LinkedinLink";
 import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import { callContactApi, setContactData } from "../../features/contactSlice";
+import axios from "axios";
 
 const Hero = () => {
     const contactFormData = useSelector((state) => state.contact.contactData)
