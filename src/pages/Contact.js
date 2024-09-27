@@ -3,6 +3,7 @@ import "../styles/ContactStyles/contact.css";
 import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import { callContactApi, setContactData } from "../features/contactSlice";
+import {openGitHubLink,openFacebookLink, openLinkedinLink, openInstagramLink} from "../components/AllLinks";
 
 const Contact = () => {
     const contactData = useSelector((state) => state.contact.contactData)
@@ -26,17 +27,17 @@ const Contact = () => {
                             <img src="social.svg" />
                         </div>
                         <div className="contact_us_social_icons_outer_container">
-                            <div className="contact_social_icon_container">
+                            <div className="contact_social_icon_container" onClick={openLinkedinLink} >
                                 <i className="fi fi-brands-linkedin contact_social_icon"></i>
                             </div>
-                            <div className="contact_social_icon_container">
+                            <div className="contact_social_icon_container" onClick={openInstagramLink}>
                                 <i className="fi fi-brands-instagram contact_social_icon"></i>
                             </div>
-                            <div className="contact_social_icon_container">
+                            <div className="contact_social_icon_container" onClick={openGitHubLink}>
                                 <i className="fi fi-brands-github contact_social_icon"></i>
                             </div>
-                            <div className="contact_social_icon_container">
-                                <i className="fi fi-brands-twitter contact_social_icon"></i>
+                            <div className="contact_social_icon_container" onClick={openFacebookLink}>
+                                <i className="fi fi-brands-facebook contact_social_icon"></i>
                             </div>
                         </div>
                     </div>
