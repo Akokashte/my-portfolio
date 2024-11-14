@@ -110,4 +110,3 @@ export const callContactApi = (contactFormData) => async (dispatch) => {
 
 export const { setContactData, setLoading, setError } = contactSlice.actions;
 export default contactSlice.reducer;
-

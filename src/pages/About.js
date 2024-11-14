@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { Suspense, useEffect } from "react";
 import "../styles/AboutStyles/about.css";
 import TechStackCard from "../components/About/AboutTechStackCard";
 import AboutUsLinkBtn from "../components/AllButtons/AboutUsLinkBtn";
@@ -37,7 +37,7 @@ const About = () => {
             linkUrl: "https://github.com/Akokashte"
         },
     ]
- 
+
     const dispatch = useDispatch()
     const publicTechStackData = useSelector((state) => state.techStack.techStackData)
 
@@ -62,122 +62,122 @@ const About = () => {
 
     return (
         <>
-            <section className="about_section_outer_container">
-                <div className="about_section_inner_container">
-                    <div className="about_title_desc_wrapper">
-                        <motion.h2
-                            initial={{
-                                opacity: 0,
-                                y: 50
+                <section className="about_section_outer_container">
+                    <div className="about_section_inner_container">
+                        <div className="about_title_desc_wrapper">
+                            <motion.h2
+                                initial={{
+                                    opacity: 0,
+                                    y: 50
 
-                            }}
-                            whileInView={{
-                                opacity: 1,
-                                y: 0,
-                                transition: {
-                                    duration: 0.5
-                                }
-                            }}
-                        >
-                            About Me
-                        </motion.h2>
-                        <motion.p
-                            initial={{
-                                opacity: 0
-                            }}
-                            whileInView={{
-                                opacity: 1,
-                                transition: {
-                                    duration: 0.6
-                                }
-                            }}
-                        >
-                            A passionate developer and BE CS student who works in technologies such as ReactJS, JavaScript, NodeJS, ExpressJS, MySQL, MongoDB, RestAPIs, WordPress
-                        </motion.p>
-                    </div>
-                    <div
-                        className="about_us_image_and_info_about_me_container">
-                        <motion.div
-                            initial={{
-                                x: -100,
-                                opacity: 0
-                            }}
-                            whileInView={{
-                                x: 0,
-                                opacity: 1,
-                                transition: {
-                                    duration: 0.5
-                                }
-                            }}
-                            className="about_us_image_wrapper">
-                            <img src="about.svg" />
-                        </motion.div>
-                        <motion.div
-                            initial={{
-                                x: 100,
-                                opacity: 0
-                            }}
-                            whileInView={{
-                                x: 0,
-                                opacity: 1,
-                                transition: {
-                                    duration: 0.5
-                                }
-                            }}
-                            className="about_us_actual_content_wrapper">
-                            <div className="about_us_paragraph_group">
-                                <p className="about_information">As a recent graduate with a strong foundation in software development, I am excited to bring my skills in JavaScript, React.js, Node.js, Express, HTML, CSS, Python, SQL, and MongoDB to the industry. My passion for coding and problem-solving drives me to continuously learn and grow, and I am eager to contribute to innovative projects and make a meaningful impact.</p>
-                                <p className="about_information">With a fresh perspective and a commitment to excellence, I am ready to embark on this journey and turn creative ideas into effective solutions.</p>
-                            </div>
-                        </motion.div>
-                    </div>
-                    <div className="all_links_here">
-                        {
-                            allAboutUsLinks.map((currentLink, index) => {
-                                return (
-                                    <AboutUsLinkBtn key={index} index={index} icon={currentLink.icon} linkTitle={currentLink.linkTitle} />
-                                )
-                            })
-                        }
-                    </div>
-                    <EducationAccordian />
-                    <motion.div
-                    initial={{
-                                opacity: 0,
-                                y: 100
-                            }}
-                            whileInView={{
-                                opacity: 1,
-                                y: 0,
-                                transition: {
-                                    duration: 0.6
-                                }
-                            }}
-                     className="about_skills_outer_container">
-                        <motion.h2
-                            initial={{
-                                opacity: 0,
-                                y: 100
-                            }}
-                            whileInView={{
-                                opacity: 1,
-                                y: 0,
-                                transition: {
-                                    duration: 0.6
-                                }
-                            }}
-                        >My Skills</motion.h2>
-                        <div className="about_skills_inner_wrapper">
+                                }}
+                                whileInView={{
+                                    opacity: 1,
+                                    y: 0,
+                                    transition: {
+                                        duration: 0.5
+                                    }
+                                }}
+                            >
+                                About Me
+                            </motion.h2>
+                            <motion.p
+                                initial={{
+                                    opacity: 0
+                                }}
+                                whileInView={{
+                                    opacity: 1,
+                                    transition: {
+                                        duration: 0.6
+                                    }
+                                }}
+                            >
+                                A passionate developer and BE CS student who works in technologies such as ReactJS, JavaScript, NodeJS, ExpressJS, MySQL, MongoDB, RestAPIs, WordPress
+                            </motion.p>
+                        </div>
+                        <div
+                            className="about_us_image_and_info_about_me_container">
+                            <motion.div
+                                initial={{
+                                    x: -100,
+                                    opacity: 0
+                                }}
+                                whileInView={{
+                                    x: 0,
+                                    opacity: 1,
+                                    transition: {
+                                        duration: 0.5
+                                    }
+                                }}
+                                className="about_us_image_wrapper">
+                                <img src="about.svg" />
+                            </motion.div>
+                            <motion.div
+                                initial={{
+                                    x: 100,
+                                    opacity: 0
+                                }}
+                                whileInView={{
+                                    x: 0,
+                                    opacity: 1,
+                                    transition: {
+                                        duration: 0.5
+                                    }
+                                }}
+                                className="about_us_actual_content_wrapper">
+                                <div className="about_us_paragraph_group">
+                                    <p className="about_information">As a recent graduate with a strong foundation in software development, I am excited to bring my skills in JavaScript, React.js, Node.js, Express, HTML, CSS, Python, SQL, and MongoDB to the industry. My passion for coding and problem-solving drives me to continuously learn and grow, and I am eager to contribute to innovative projects and make a meaningful impact.</p>
+                                    <p className="about_information">With a fresh perspective and a commitment to excellence, I am ready to embark on this journey and turn creative ideas into effective solutions.</p>
+                                </div>
+                            </motion.div>
+                        </div>
+                        <div className="all_links_here">
                             {
-                                !publicTechStackData ? <Loader /> :
-                                publicTechStackData.map((curTechStack, index) => {
-                                    return <TechStackCard key={index} techStackName={curTechStack.name} techStackImage={curTechStack.techStackImage} techStackPercentage={curTechStack.skillPercentage} />
+                                allAboutUsLinks.map((currentLink, index) => {
+                                    return (
+                                        <AboutUsLinkBtn key={index} index={index} icon={currentLink.icon} linkTitle={currentLink.linkTitle} />
+                                    )
                                 })
                             }
                         </div>
-                    </motion.div>
-                </div>
-            </section>
+                        <EducationAccordian />
+                        <motion.div
+                            initial={{
+                                opacity: 0,
+                                y: 100
+                            }}
+                            whileInView={{
+                                opacity: 1,
+                                y: 0,
+                                transition: {
+                                    duration: 0.6
+                                }
+                            }}
+                            className="about_skills_outer_container">
+                            <motion.h2
+                                initial={{
+                                    opacity: 0,
+                                    y: 100
+                                }}
+                                whileInView={{
+                                    opacity: 1,
+                                    y: 0,
+                                    transition: {
+                                        duration: 0.6
+                                    }
+                                }}
+                            >My Skills</motion.h2>
+                            <div className="about_skills_inner_wrapper">
+                                {
+                                    !publicTechStackData ? <Loader /> :
+                                        publicTechStackData.map((curTechStack, index) => {
+                                            return <TechStackCard key={index} techStackName={curTechStack.name} techStackImage={curTechStack.techStackImage} techStackPercentage={curTechStack.skillPercentage} />
+                                        })
+                                }
+                            </div>
+                        </motion.div>
+                    </div>
+                </section>
         </>
     )
 }

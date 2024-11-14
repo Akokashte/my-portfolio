@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const GetResume = () => {
     return (
         <>
-            <NavLink to={"https://drive.google.com/file/d/1JfA4bAsVXwJ7sn98R_b6U5CASqpx33tg/view?usp=sharing"} target="_blank" className="btn_container">
+            <NavLink to={"https://drive.google.com/file/d/1Cjf9iB8yYn71HmaQrvdMB8iiKJWugj9W/view?usp=sharing"} target="_blank" className="btn_container">
             <motion.div
             whileTap={{
               scale: 0.90
