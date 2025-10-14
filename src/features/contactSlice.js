@@ -20,7 +20,7 @@ const validateContactData = (contactFormData) => {
 
     if (!contactFormData.fname || !fnameRegex.test(contactFormData.fname)) {
         if (!contactFormData.fname) {
-            notifyError('fname is required !')
+            notifyError('name is required !')
         }
         else {
             notifyError('Please enter a valid name')
@@ -36,7 +36,7 @@ const validateContactData = (contactFormData) => {
         }
         return false
     }
-    else if (contactFormData.phoneNumber.length != 10 || !phoneRegex.test(contactFormData.phoneNumber)) {
+    else if (contactFormData.phoneNumber.length !== 10 || !phoneRegex.test(contactFormData.phoneNumber)) {
         if (!contactFormData.phoneNumber) {
             notifyError('phone number is required !')
         }
@@ -82,7 +82,7 @@ export const callContactApi = (contactFormData) => async (dispatch) => {
     }
     dispatch(setLoading(true));
     try {
-        const response = await axios.post(`${process.env.REACT_APP_BACKEND_BASE_URL}/api/v1/contact/send/contact/email`, contactFormData); // Replace with your actual API endpoint
+        const response = await axios.post(`${process.env.REACT_APP_BACKEND_BASE_URL}/api/v1/contact/send/contact`, contactFormData); // Replace with your actual API endpoint
 
         if (response.data.data.isContactEmailSent) {
             dispatch(setContactData({

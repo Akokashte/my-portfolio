@@ -1,14 +1,12 @@
-import React, { Suspense, useEffect } from "react";
+import React, { useEffect } from "react";
 import "../styles/ProjectStyles/project.css";
-// import ProjectCard from 
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { setProjectData } from "../features/projectSlice";
 import { notifyError } from "../utils/toastfy/Notification";
 import { motion } from "framer-motion";
-import Loader from "../components/Loader";
 import ProjectCardSkeleton from "../components/ProjectComponents/ProjectCardSkeleton";
-const MyProjectCard = React.lazy(() => import("../components/ProjectComponents/ProjectCard"))
+import ProjectCard from "../components/ProjectComponents/ProjectCard";
 
 const Project = () => {
     const dispatch = useDispatch()
@@ -65,11 +63,13 @@ const Project = () => {
                         </motion.p>
                     </div>
                     {
-                        !projectData ? <Loader /> :
+                        !projectData.length ?
+                            Array.from({ length: 3 }).map((curProject, index) => {
+                                return <ProjectCardSkeleton />
+                            })
+                            :
                             projectData.map((curProject, index) => {
-                                return <Suspense fallback={<ProjectCardSkeleton />}>
-                                    <MyProjectCard key={index} curProject={curProject} />
-                                </Suspense>
+                                return <ProjectCard index={index} curProject={curProject} />
                             })
                     }
                 </div>

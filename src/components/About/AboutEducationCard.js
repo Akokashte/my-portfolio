@@ -1,20 +1,8 @@
-import { motion } from "framer-motion";
 
 const AboutEducationCard = ({ standard, collegeName, passoutYear, grade, icon }) => {
     return (
         <>
-            <motion.div
-                initial={{
-                    opacity: 0,
-                    y: 100
-                }}
-                whileInView={{
-                    opacity: 1,
-                    y: 0,
-                    transition: {
-                        duration: 0.6
-                    }
-                }}
+            <div
                 className="accordian_content_wrapper">
                 <div className="education_icon">
                     {icon}
@@ -31,7 +19,7 @@ const AboutEducationCard = ({ standard, collegeName, passoutYear, grade, icon })
                         <p>{grade}</p>
                     </div>
                 </div>
-            </motion.div>
+            </div>
         </>
     )
 }

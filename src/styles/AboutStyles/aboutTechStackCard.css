@@ -18,18 +18,19 @@
     padding: 0.5rem 0.5rem;
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 0.8rem;
     /* background-color:gray;  */
 }
 
 .tech_stack_icon_container {
     width: 6rem;
-    height: 100%;
+    height: 6rem;
     display: flex;
 }
 
 .tech_stack_icon_container img {
     object-fit: cover;
+    display: block;
     height: 100%;
     width: 100%;
 }

@@ -43,6 +43,7 @@
 
 .animae_image_and_service_stack_container {
     display: flex;
+    overflow: hidden;
 }
 
 .service_stack {
@@ -54,6 +55,7 @@
 
 .service {
     width: 100%;
+    margin-left: 0.1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;

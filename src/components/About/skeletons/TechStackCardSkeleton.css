@@ -1,0 +1,21 @@
+.shimmer_tech_stack_icon_container {
+    background-color: #ececec;
+    animation: skeleton_loading_animation 1s linear infinite alternate;
+}
+
+.shimmer_tech_stack_info {
+    background-color: #ececec; 
+    height: 2rem;
+    width: 50%;
+    animation: skeleton_loading_animation 1s linear infinite alternate;
+}
+
+@keyframes skeleton_loading_animation {
+    0% {
+        background-color: hsl(200, 20%, 70%);
+    }
+
+    100% {
+        background-color: hsl(200, 20%, 90%);
+    }
+}

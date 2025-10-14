@@ -5,8 +5,8 @@ import axios from "axios";
 import { setRecentProjectData } from "../../features/projectSlice";
 import { useNavigate } from "react-router-dom";
 import { notifyError } from "../../utils/toastfy/Notification";
-import { motion } from "framer-motion";
-import Loader from "../Loader";
+import RecentProjectCardSkeleton from "../../skeletons/RecentProjectCardSkeleton";
+import RecentProjectCard from "./RecentProjectCard";
 
 const RecentProjects = () => {
     const [currentScreenWidth, setCurrentScreenWidth] = useState()
@@ -15,14 +15,16 @@ const RecentProjects = () => {
     const recentProjectData = useSelector((state) => state.project.recentProjectData)
     const navigate = useNavigate()
 
+    console.log("recentProjectData", recentProjectData)
+
     useEffect(() => {
         const handleResize = () => setCurrentScreenWidth(window.innerWidth);
         window.addEventListener("resize", handleResize);
         fetchProjects()
         return () => window.removeEventListener("resize", handleResize);
-    }, [recentProjectData])
+    }, []);
 
-    const fetchProjects = async () => {
+    async function fetchProjects() {
         try {
             const fetchProjectResponse = await axios.get(`${process.env.REACT_APP_BACKEND_BASE_URL}/api/v1/project/recent/project`)
 
@@ -35,6 +37,7 @@ const RecentProjects = () => {
     }
 
     const slicingLimitOfCharacter = currentScreenWidth >= 480 ? 80 : 55
+
     const handleButtonClick = (url) => {
         navigate(`/projects/${url}`)
     }
@@ -43,71 +46,30 @@ const RecentProjects = () => {
         <>
             <section className="recent_project_section">
                 <div className="recent_project_container">
-                    <motion.div
-                        initial={{ y: 100, opacity: 0 }}
-                        whileInView={{
-                            y: 0, opacity: 1,
-                            transition: {
-                                duration: 0.6,
-                            }
-                        }}
-                        exit={{
-                            y: 100,
-                            opacity: 0
-                        }}
+                    <div
                         className="recent_project_head_desc_container"
                     >
                         <h2>Recent Projects</h2>
                         <p>Projects that helped me to learn concepts in better way and I enjoyed them while programming it.</p>
-                    </motion.div>
+                    </div>
                     <div className="arrow_image">
                         <img src="down_arrow.webp" alt="down_arrow icon here" />
                     </div>
                     <div className="project_wrapper">
-                        <motion.div className="project_container"
-                            initial={{ y: 100, opacity: 0 }}
-                            whileInView={{
-                                y: 0,
-                                opacity: 1,
-                                transition: {
-                                    duration: 0.6,
-                                }
-                            }}
-                        >
-                        {
-                            !recentProjectData ? <Loader />:
-                                recentProjectData.map((curRecentProject, index) => {
-                                    return <motion.div
-                                        initial={{ y: 100, opacity: 0 }}
-                                        whileInView={{
-                                            y: 0,
-                                            opacity: 1,
-                                            transition: {
-                                                duration: 0.6,
-                                            }
-                                        }}
-                                        className="project"
-                                        key={index}
-                                    >
-                                        <div className="thumbnail_metadata_container" key={index}>
-                                            <div className="project_thumbnail">
-                                                <img src={curRecentProject.featuredImage} alt="project thumbnail" />
-                                            </div>
-                                            <div className="meta_data">
-                                                <h4>{curRecentProject.title}</h4>
-                                                <p>
-                                                    {curRecentProject.projectEditorBlocksData[1]?.data?.text?.slice(0, slicingLimitOfCharacter)}...
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div className="project_page_btn" onClick={() => handleButtonClick(curRecentProject.url)} >
-                                            Explore Project
-                                        </div>
-                                    </motion.div>
-                                })
+                        <div className="project_container">
+                            {
+                                !recentProjectData.length ?
+                                    Array.from({ length: 3 }).map((curCard, index) => {
+                                        return <RecentProjectCardSkeleton />
+                                    })
+                                    :
+                                    recentProjectData.map((currentRecentProjectData, index) => {
+                                        return <RecentProjectCard key={index} index={index} handleButtonClick={handleButtonClick} slicingLimitOfCharacter={slicingLimitOfCharacter} currentRecentProjectData={currentRecentProjectData} />
 
-                        }
-                        </motion.div>
+                                    })
+
+                            }
+                        </div>
                     </div>
                 </div>
             </section >

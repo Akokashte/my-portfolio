@@ -1,9 +1,12 @@
+import { toast } from "react-toastify"
+
 const openGitHubLink = () => {
     window.open("https://github.com/Akokashte", "_blank")
 }
 
 const openInstagramLink = () => {
-    window.open("https://www.instagram.com/kashteankit", "_blank")
+    // window.open("https://www.instagram.com/kashteankit", "_blank")
+    toast("Not available")
 }
 
 const openFacebookLink = () => {

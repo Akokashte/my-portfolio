@@ -1,0 +1,34 @@
+.shimmer_border {
+    background-color: #ececec;
+    animation: skeleton_loading_animation 1s linear infinite alternate;
+}
+
+.shimmer_mytech_icon {
+    background-color: #ececec;
+    border-radius: 50%;
+    animation: skeleton_loading_animation 1s linear infinite alternate;
+}
+
+.shimmer_tech_title {
+    background-color: #ececec;
+    height: 2rem;
+    width: 70%;
+    animation: skeleton_loading_animation 1s linear infinite alternate;
+}
+
+.tech_percentage_container_shimmer {
+    box-shadow: none;
+    border: 0.5px solid rgb(255, 255, 255);
+    animation: skeleton_loading_animation 1s linear infinite alternate;
+}
+
+
+@keyframes skeleton_loading_animation {
+    0% {
+        background-color: hsl(200, 20%, 70%);
+    }
+
+    100% {
+        background-color: hsl(200, 20%, 90%);
+    }
+}

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "../../styles/ProjectStyles/projectCard.css";
 import ProjectCategoryBtn from "./ProjectCategoryBtn";
 import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
 
 const ProjectCard = ({ curProject }) => {
     const [width, setWidth] = useState(window.outerWidth)
@@ -28,20 +27,7 @@ const ProjectCard = ({ curProject }) => {
 
     return (
         <>
-            <motion.div
-                initial={{
-                    opacity: 0,
-                    y: 200
-                }}
-                whileInView={{
-                    opacity: 1,
-                    y: 0,
-                    transition: {
-                        duration: 0.5
-                    }
-                }}
-                className="project_card_info"
-            >
+            <div className="project_card_info">
                 <div className="project_thumbnail_image" onClick={() => navigate(`/projects/${url}`)}>
                     <img src={featuredImage} alt="project thumb" />
                 </div>
@@ -62,7 +48,7 @@ const ProjectCard = ({ curProject }) => {
                         }
                     </div>
                 </div>
-            </motion.div>
+            </div>
         </>
     )
 }

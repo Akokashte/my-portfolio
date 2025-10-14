@@ -1,25 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../../styles/ProjectStyles/ProjectSkeleton.css";
-import ProjectCategoryBtn from "./ProjectCategoryBtn";
-import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
 import ProjectCategoryButtonSkeleton from "./ProjectCategoryButtonSkeleton";
+
 
 const ProjectCardSkeleton = () => {
     return (
         <>
-            <motion.div
-                initial={{
-                    opacity: 0,
-                    y: 200
-                }}
-                whileInView={{
-                    opacity: 1,
-                    y: 0,
-                    transition: {
-                        duration: 0.5
-                    }
-                }}
+            <div
                 className="project_skeleton_card_info"
             >
                 <div className="project_skeleton_thumbnail_image">
@@ -44,7 +31,7 @@ const ProjectCardSkeleton = () => {
                         <ProjectCategoryButtonSkeleton />
                     </div>
                 </div>
-            </motion.div>
+            </div>
         </>
     )
 }
