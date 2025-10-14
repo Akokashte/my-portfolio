@@ -96,7 +96,6 @@ const ImageBlock = ({ data }) => {
 }
 
 const OrderedListBlock = ({ data, Tag }) => {
-    console.log(data)
     return (
         <Tag
             className="list_container"

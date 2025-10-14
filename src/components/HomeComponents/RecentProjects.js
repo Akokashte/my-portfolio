@@ -15,8 +15,6 @@ const RecentProjects = () => {
     const recentProjectData = useSelector((state) => state.project.recentProjectData)
     const navigate = useNavigate()
 
-    console.log("recentProjectData", recentProjectData)
-
     useEffect(() => {
         const handleResize = () => setCurrentScreenWidth(window.innerWidth);
         window.addEventListener("resize", handleResize);
