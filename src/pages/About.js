@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect } from "react";
+import React, { useEffect } from "react";
 import "../styles/AboutStyles/about.css";
 import TechStackCard from "../components/About/AboutTechStackCard";
 import AboutUsLinkBtn from "../components/AllButtons/AboutUsLinkBtn";
@@ -6,7 +6,6 @@ import EducationAccordian from "../components/About/EducationAccordian";
 import { useDispatch, useSelector } from "react-redux";
 import { setTechStackData } from "../features/techStackSlice";
 import axios from "axios";
-import { motion } from "framer-motion";
 import TechStackCardSkeleton from "../components/About/skeletons/TechStackCardSkeleton";
 
 const About = () => {
@@ -41,10 +40,6 @@ const About = () => {
     const dispatch = useDispatch()
     const publicTechStackData = useSelector((state) => state.techStack.techStackData)
 
-    useEffect(() => {
-        fetchTechStackData()
-    }, [])
-
     const fetchTechStackData = async () => {
         try {
             if (publicTechStackData.length === 0) {
@@ -60,6 +55,10 @@ const About = () => {
         }
     }
 
+    useEffect(() => {
+        fetchTechStackData()
+    }, [])
+    
     return (
         <>
             <section className="about_section_outer_container">
@@ -76,7 +75,7 @@ const About = () => {
                         className="about_us_image_and_info_about_me_container">
                         <div
                             className="about_us_image_wrapper">
-                            <img src="about.svg" />
+                            <img src="about.svg" alt="about photo" />
                         </div>
                         <div
                             className="about_us_actual_content_wrapper">
