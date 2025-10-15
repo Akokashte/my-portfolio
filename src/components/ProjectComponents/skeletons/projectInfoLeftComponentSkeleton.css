@@ -1,0 +1,26 @@
+.shimmer_featured_image {
+    background-color: #ececec;
+    animation: skeleton_loading_animation 1s linear infinite alternate;
+}
+
+.shimmer_project_title {
+    background-color: #ececec;
+    height: 2rem;
+    animation: skeleton_loading_animation 1s linear infinite alternate;
+}
+
+.shimmer_block_data {
+    background-color: #ececec;
+    height: 10rem;
+    animation: skeleton_loading_animation 1s linear infinite alternate;
+}
+
+@keyframes skeleton_loading_animation {
+    0% {
+        background-color: hsl(200, 20%, 70%);
+    }
+
+    100% {
+        background-color: hsl(200, 20%, 90%);
+    }
+}

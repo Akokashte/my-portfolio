@@ -1,0 +1,32 @@
+.shimmer_img_wrapper {
+    background-color: #ececec;
+    height: 6.5rem;
+    width: 100%;
+    height: 100%;
+    animation: skeleton_loading_animation 1s linear infinite alternate;
+}
+
+.shimmer_small_card_content_heading {
+    background-color: #ececec;
+    height: 1rem;
+    animation: skeleton_loading_animation 1s linear infinite alternate;
+}
+
+.shimmer_cat_tab {
+    width: 5rem;
+    height: 1rem;
+    background-color: #ececec;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.2rem;
+    animation: skeleton_loading_animation 1s linear infinite alternate;
+}
+
+@keyframes skeleton_loading_animation {
+    0% {
+        background-color: hsl(200, 20%, 70%);
+    }
+
+    100% {
+        background-color: hsl(200, 20%, 90%);
+    }
+}

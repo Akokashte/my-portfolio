@@ -4,16 +4,15 @@ import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import "../../styles/ProjectStyles/projectSidebar.css";
 import { setRecentProjectData } from "../../features/projectSlice";
-import { motion } from "framer-motion";
-import Loader from "../Loader";
+import ProjectSmallCardSkeleton from "./skeletons/ProjectSmallCardSkeleton";
 
 const ProjectSidebar = () => {
     const recentProjectData = useSelector((state) => state.project.recentProjectData)
     const dispatch = useDispatch()
 
-    useEffect(()=>{
+    useEffect(() => {
         fetchProjects()
-    },[recentProjectData])
+    }, [])
 
     const fetchProjects = async () => {
         try {
@@ -29,31 +28,20 @@ const ProjectSidebar = () => {
 
     return (
         <>
-            <motion.section 
-            initial = {{
-                opacity:0,
-                y:100
-            }}
-            whileInView={{
-                opacity:1,
-                y:0,
-                transition:{
-                    duration:0.5,
-                    ease:"easeInOut",
-                    staggerChildren:0.3
-                }
-            }}
-            className="project_sidebar_section">
+            <section
+                className="project_sidebar_section">
                 <h2 className="project_sidebar_heading">Recent Projects</h2>
                 <div className="project_sidebar_container">
                     {
-                        !recentProjectData ? <Loader /> :
-                        recentProjectData.map((recentProjectData, index) => (
-                            <ProjectSmallCard key={index} featuredImage={recentProjectData.featuredImage} projectTitle={recentProjectData.title} url={recentProjectData.url} />
-                        ))
+                        !recentProjectData.length ? Array.from({ length: 3 }).map((curCard, index) => {
+                            return <ProjectSmallCardSkeleton key={index} />
+                        }) :
+                            recentProjectData.map((recentProjectData, index) => (
+                                <ProjectSmallCard key={index} featuredImage={recentProjectData.featuredImage} projectTitle={recentProjectData.title} url={recentProjectData.url} />
+                            ))
                     }
                 </div>
-            </motion.section>
+            </section>
         </>
     )
 }

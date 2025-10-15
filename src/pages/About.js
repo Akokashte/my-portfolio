@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setTechStackData } from "../features/techStackSlice";
 import axios from "axios";
 import TechStackCardSkeleton from "../components/About/skeletons/TechStackCardSkeleton";
+import ExperienceSection from "../components/About/ExperienceSection";
 
 const About = () => {
     const allAboutUsLinks = [
@@ -58,7 +59,7 @@ const About = () => {
     useEffect(() => {
         fetchTechStackData()
     }, [])
-    
+
     return (
         <>
             <section className="about_section_outer_container">
@@ -95,6 +96,7 @@ const About = () => {
                         }
                     </div>
                     <EducationAccordian />
+                    <ExperienceSection />
                     <div className="about_skills_outer_container">
                         <h2 >My Skills</h2>
                         <div className="about_skills_inner_wrapper">

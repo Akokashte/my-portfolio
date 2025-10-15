@@ -7,6 +7,7 @@ import axios from "axios";
 import { setCurrentProjectData } from "../features/projectSlice";
 import ProjectSidebar from "../components/ProjectComponents/ProjectSidebar";
 import { notifyError } from "../utils/toastfy/Notification";
+import ProjectInfoLeftComponentSkeleton from "../components/ProjectComponents/skeletons/ProjectInfoLeftComponentSkeleton";
 
 const ProjectInfo = () => {
     const dispatch = useDispatch()
@@ -15,7 +16,7 @@ const ProjectInfo = () => {
 
     useEffect(() => {
         fetchProject()
-    }, [projectData])
+    }, [])
 
     const fetchProject = async () => {
         try {
@@ -26,7 +27,7 @@ const ProjectInfo = () => {
                     }
                 }
             )
-            if(fetchProjectResponse.data.success){
+            if (fetchProjectResponse.data.success) {
                 dispatch(setCurrentProjectData(fetchProjectResponse.data.data))
             }
         } catch (error) {
@@ -37,11 +38,15 @@ const ProjectInfo = () => {
         <>
             <section className="project_info_new_section">
                 <div className="project_info_actual_inner_container">
-                    <ProjectInfoLeftComponent
-                        title={projectData.title}
-                        featuredImage={projectData.featuredImage}
-                        projectEditorBlocksData={projectData.projectEditorBlocksData}
-                    />
+                    {
+                        !(projectData.title && projectData.featuredImage && projectData.projectEditorBlocksData) ?
+                            <ProjectInfoLeftComponentSkeleton /> :
+                            <ProjectInfoLeftComponent
+                                title={projectData.title}
+                                featuredImage={projectData.featuredImage}
+                                projectEditorBlocksData={projectData.projectEditorBlocksData}
+                            />
+                    }
                     <ProjectSidebar />
                 </div>
             </section>
