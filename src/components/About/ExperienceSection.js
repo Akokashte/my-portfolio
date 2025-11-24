@@ -9,7 +9,7 @@ const ExperienceSection = () => {
     {
       title: "Associate MERN Developer",
       company: "Savitar Innovative Solutions",
-      duration: "Jan 2025 - Present",
+      duration: "Jan 2025 - Oct 2025",
       location: "Nagpur, India",
       description: "Developed a comprehensive full-stack service platform with web and mobile applications, managing both frontend development (React.js, React Native) and backend API architecture (Node.js). Implemented key integrations including payment processing and location services while leading UI development for company projects.",
       responsibilities: [
